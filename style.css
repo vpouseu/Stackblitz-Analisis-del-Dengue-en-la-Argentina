@@ -10,3 +10,7 @@ h1, h2 {
   margin-left: 40px;
   margin-right: 80px;
 }
+iframe {
+  display: block;
+  margin: 0 auto;
+}
