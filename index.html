@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Visualización de datos del Dengue en la Argentina</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: lightblue;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Arial;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Dengue en la Argentina </h1>
+    <h4 class="main-autor">Nombre: Viviana Andrea Pouseu</h3>
+    <h4 class="main-url">Url: <a href="https://js-aauhmw-titanic.stackblitz.io/">https://js-aauhmw-titanic.stackblitz.io/</a></h3>
+    
+    <h4 class="main-fecha">Fecha: 30/04/2023</h4>
+    <br>
+    <br>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+      <h2 class="text-title">Introducción</h2>
+      <div class="text">
+        
+       <p> El dengue es una enfermedad viral  transmitida por un mosquito, que puede presentar diferentes cuadros clínicos y cuyo pronóstico es impredecible. La Organización Mundial de la Salud (OMS) la considera una enfermedad emergente que puede provocar epidemias en muchas regiones del mundo. De hecho, el número de casos se ha multiplicado por 30 en los últimos 50 años y se estima que en la actualidad amenaza a la mitad de la población mundial: hay más de 100 países endémicos
+        
+        El actual brote de dengue en Argentina es el más letal de la historia en el país. Más de 50.000 personas han contraído este año la enfermedad transmitida por la picadura del mosquito ‘Aedes aegypti’ y las muertes ascendieron a 39. Los expertos se muestran preocupados por el impacto del cambio climático en la aparición de nuevos patrones. El aumento global de la temperatura favorece la propagación de enfermedades en Argentina que hasta ahora se asociaban a países tropicales.
+        
+        Es importante entonces,  conocer la evolución de la enfermedad a través de los años en cuanto a la cantidad de casos,  su incidencia en la población, la distribución geográfica y el índice de mortalidad para  poder identificar patrones y tendencias en la propagación de la enfermedad.
+        <br>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmIK3Apb08luig-3VrHk4jRokDnK0hQrw1WDSv0KqZ9l2mUS6U7F51XdX6tMdEkA/pubchart?oid=1429693481&amp;format=interactive"></iframe>
+        <br><b>Fuentes:</b>
+        <br>
+          <ul>
+            <li><a href="https://www.msf.org.ar/conocenos/enfermedades/dengue">Dengue - Médicos Sin Fronteras</a></li>
+            <li><a href="https://elpais.com/argentina/2023-04-23/argentina-registra-el-brote-de-dengue-mas-letal-de-su-historia-con-al-menos-39-muertos.html">Argentina registra el brote de dengue más letal de su historia, con al menos 39 muertos - El País</a></li>
+          </ul> </p>
+        </div>
+        
+
+<h2 class="text-title">Objetivos</h2>
+<div class="text">
+
+El análisis de los datos estadísticos sobre el dengue en Argentina puede permitir comprender la dimensión del problema y su distribución geográfica, lo que puede ayudar a las autoridades sanitarias a implementar medidas preventivas y de control más efectivas.
+
+El siguiente  análisis pretende responder a las siguientes preguntas:
+
+
+    <ul>
+      <li>¿Cómo se distribuye en el país el virus del dengue?</li>
+      <li>¿Cuál es la evolución epidemiológica según la semana?</li>
+      <li>¿Cuál es la incidencia de los casos según el grupo etario?</li>
+      <li>¿Cuál es la tasa de mortalidad y su evolución en el tiempo?</li>
+    </ul>
+ 
+  </div>
+<h2 class="text-title">Analisis</h2>
+<div class="text">
+<p>El actual brote de dengue en Argentina es el más letal de la historia en el país. Los casos acumulados registrados hasta el momento en la presente temporada están por encima de los de los dos años previos y -comparando con las dos epidemias previas- se encuentran un 48,4% por encima de los registrados para el mismo periodo en 2020.</p>
+<p>Como no se cuenta con la información consolidada por provincia, ni rango etario para este año, realizaré un análisis sobre los datos consolidados de la pandemia del año 2020, para poder extrapolar los mismos a la situación actual.</p>
+<p>El primer análisis a realizar será el de la distribución geográfica de los casos.</p>
+<iframe title="Casos de dengue según provincia" aria-label="Map" id="datawrapper-chart-1GNZf" src="https://datawrapper.dwcdn.net/1GNZf/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="777" data-external="1"></iframe>
+<iframe title="Casos de dengue según departamento" aria-label="Map" id="datawrapper-chart-qT4w9" src="https://datawrapper.dwcdn.net/qT4w9/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="749" data-external="1"></iframe>
+<p>Se puede observar una amplia dispersión territorial de los casos,  exceptuando la zona sur del país debido a las bajas temperaturas de la zona
+</p>
+<p> Otro dato interesante para observar es la semana en del año en la que se producen los picos del brote epidémico <p>
+  <iframe title="Casos de Dengue por semana según año 2018 a 2022" aria-label="Interactive line chart" id="datawrapper-chart-Snwlv" src="https://datawrapper.dwcdn.net/Snwlv/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400" data-external="1"></iframe>
+ <p> La dinámica de la curva epidémica muestra a partir de la semana 5 empieza a crecer el número de casos llegando a su pico entre la semana 16 y 20.   El inicio de los casos coincide con la temporada estival en Argentina<p>
+<p> Análisis de casos por Grupo Etario</p>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmIK3Apb08luig-3VrHk4jRokDnK0hQrw1WDSv0KqZ9l2mUS6U7F51XdX6tMdEkA/pubchart?oid=1840108815&amp;format=interactive"></iframe>
+
+  
+</div><!-- add outro text to the page body -->
+    <div class="Conclusión">
+        <h2 class="text-title">Conclusión</h2>
+        <div class="text">
+            <p>Teniendo en cuenta que las mujeres eran del 35%(466/1309) y las mujeres de 1ª y 2ª clase representan solo el 24%( (139+94)/1309) del tamaño total de la muestra, se evidencia que las personas que se pusieron en botes salvavidas no se tomaron al azar, sino de forma selectiva. La visualización de gráficos cirulares combinados muestra que las características de ser mujer y pertenecer a las clases más altas(1ª y 2ª) eran las principales prioridades para colocarse en botes salvavidas.</p>
+            </br>
+        </div>
+    </div>
+    <div class="Datos Consultados">
+      <h2 class="text-title">Datos consultados
+      </h2>
+      <div class="text">
+        
+          <p>Los datos se obtuvieron del Ministerio de Salud de Argentina: <a href="http://datos.salud.gob.ar/dataset/vigilancia-de-dengue-y-zika">http://datos.salud.gob.ar/dataset/vigilancia-de-dengue-y-zika</a></p>
+          
+          <p>Debido a que no se contaba con un dataset unificado con la información histórica, se procede a descargar los datos de:</p>
+          
+          <ul>
+          <li>Diciembre 2018 <a href="http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/255440b0-d8b2-4247-87d2-91dfec29eb0f/download/informacion-publica-dengue-zika-nacional-hasta-20181231.csv">http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/255440b0-d8b2-4247-87d2-91dfec29eb0f/download/informacion-publica-dengue-zika-nacional-hasta-20181231.csv</a></li>
+          <li>Diciembre 2019 <a href="http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/ab93dc4b-4e6c-499b-9335-c548a701a870/download/informacion-publica-dengue-zika-nacional-hasta-20191231_3.xlsx">http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/ab93dc4b-4e6c-499b-9335-c548a701a870/download/informacion-publica-dengue-zika-nacional-hasta-20191231_3.xlsx</a></li>
+          <li>Diciembre 2020 <a href="http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/9a6eed8b-6951-4348-b96d-3330eff13b2f/download/informacion-publica-dengue-zika-nacional-hasta-20210731.xlsx">http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/9a6eed8b-6951-4348-b96d-3330eff13b2f/download/informacion-publica-dengue-zika-nacional-hasta-20210731.xlsx</a></li>
+          li>Diciembre 2021 <a href="http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/8275ff70-94e5-4ee0-9cbb-630587daa618/download/1648473440-6ff92f5b32926ebfb17725a0ab8e991652470725-informacion-publica-dengue-zika-nacional-ha.xlsx">http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/8275ff70-94e5-4ee0-9cbb-630587daa618/download/1648473440-6ff92f5b32926ebfb17725a0ab8e991652470725-informacion-publica-dengue-zika-nacional-ha.xlsx</a></li> </ul>
+          <p>El set de datos, es de elaboración propia e incluye la información provista desde Diciembre de 2018 hasta Diciembre de 2022, y se han geolocalizado las localidades para poder mostrar la información en el mapa.</p>
+          </br>
+      </div>
+  </div>
+
+        </br>
+        </br>
+        </br>
+    </div>
+
+    
+</body>
+</html>
